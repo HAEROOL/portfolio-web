@@ -1,0 +1,99 @@
+{
+  "portfolio": {
+    "hero": {
+      "badge": "",
+      "badgeStatus": "NOW PLAYING",
+      "title": {
+        "line1": "HELLO. I'M",
+        "line2": "HAEROO LEE",
+        "line3": "DEVELOPER"
+      },
+      "quote": {
+        "text": "\"새로운 것을 배우고, 경험하는 것을 좋아합니다.\"",
+        "subtext": "최근엔 AI를 활용하는 것에 흥미를 갖고 있습니다"
+      },
+      "buttons": {
+        "start": "GITHUB",
+        "subscribe": "BLOG"
+      },
+      "image": "https://images.unsplash.com/photo-1553172574-1eb37430181e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "level": "LV.99"
+    },
+    "trackList": {
+      "title": "Projects",
+      "subtitle": "SIDE A: TEAM PROJECTS",
+      "tracks": [
+        {
+          "id": "01",
+          "title": "SA-FIELD",
+          "genre": "Game Data Analytics Platform",
+          "desc": "서든어택 클랜전 및 개인 랭킹과 전적 검색 서비스를 제공하는 플랫폼입니다.",
+          "stack": ["Next.js", "TypeScript", "Tailwind", "Playwright", "Jest", "React Testing Library"],
+          "color": "bg-[#FF00FF]",
+          "image": "https://images.unsplash.com/photo-1599605614292-7701fa003c19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        },
+        {
+          "id": "02",
+          "title": "My-Lio",
+          "genre": "Kiosk",
+          "desc": "고객의 키오스크 접근성을 위한 LLM API기반의 대화형 키오스크 서비스입니다.",
+          "stack": ["React", "TypeScript", "Tailwind", "Zustand", "Cypress", "Storybook"],
+          "color": "bg-[#00FFFF]",
+          "image": "https://images.unsplash.com/photo-1684402363305-8cf29bd684b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        },
+        {
+          "id": "03",
+          "title": "Speechfy",
+          "genre": "AI Service",
+          "desc": "생성형 AI를 활용해 사용자의 허밍을 악기소리로 변환하여 작곡하는 서비스입니다.",
+          "stack": ["Next.js", "TypeScript", "Tailwind", "TanStackQuery", "Tensorflow.js"],
+          "color": "bg-[#FFFF00]",
+          "image": "https://images.unsplash.com/photo-1759171052927-83f3b3a72b2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        },
+        {
+          "id": "04",
+          "title": "Git-Eat",
+          "genre": "AI Service",
+          "desc": "LLM API를 활용해 코드리뷰를 보조해주는 서비스입니다.",
+          "stack": ["React", "TypeScript", "Tailwind", "TanStackQuery", "Tensorflow.js", "MSW"],
+          "color": "bg-[#FFFF00]",
+          "image": "https://images.unsplash.com/photo-1759171052927-83f3b3a72b2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+        }
+      ]
+    },
+    "inventory": {
+      "title": "Inventory",
+      "skills": [
+        { "name": "JavaScript", "icon": "Cpu", "color": "bg-[#F7DF1E]" },
+        { "name": "TypeScript", "icon": "Monitor", "color": "bg-[#3178C6]" },
+        { "name": "React", "icon": "Layers", "color": "bg-[#61DAFB]" },
+        { "name": "NextJS", "icon": "Battery", "color": "bg-[#000000] text-white" },
+        { "name": "TanStackQuery", "icon": "Wifi", "color": "bg-[#FF4154]" },
+        { "name": "TailwindCSS", "icon": "Database", "color": "bg-[#38B2AC]" },
+        { "name": "Zustand", "icon": "Layers", "color": "bg-[#433928]" },
+        { "name": "MSW", "icon": "Wifi", "color": "bg-[#FF6A33]" },
+        { "name": "Git", "icon": "Cpu", "color": "bg-[#F05032]" },
+        { "name": "Docker", "icon": "Database", "color": "bg-[#2496ED]" },
+        { "name": "Jira", "icon": "Monitor", "color": "bg-[#0052CC]" },
+        { "name": "Figma", "icon": "Battery", "color": "bg-[#F24E1E]" },
+        { "name": "Cypress", "icon": "Wifi", "color": "bg-[#17202C]" }
+      ],
+      "stickers": ["KEEP LEARNING", "NO BUG NO LIFE", "COFFEE POWERED"]
+    },
+    "fanMail": {
+      "address": "developer@otaku.com",
+      "title": "Send Fan Mail",
+      "form": {
+        "nameLabel": "YOUR NAME:",
+        "namePlaceholder": "ENTER NAME...",
+        "messageLabel": "MESSAGE:",
+        "messagePlaceholder": "TYPE YOUR MESSAGE HERE...",
+        "button": "SEND MESSAGE"
+      },
+      "footer": {
+        "copyright": "© 2025 MAISON DE OTAKU. ALL RIGHTS RESERVED.",
+        "credits": "DESIGNED WITH 💜 & ☕"
+      }
+    }
+  }
+}
