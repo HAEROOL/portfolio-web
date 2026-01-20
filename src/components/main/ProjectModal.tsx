@@ -116,6 +116,12 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   <Briefcase className="text-[#EE00EE] dark:text-[#00FFFF]" size={24} />
                   <span className="font-bold">{project.role}</span>
                 </div>
+                {project.award && (
+                  <div className="flex items-center gap-4 text-lg text-black dark:text-white font-mono">
+                    <Zap className="text-[#FFFF00] fill-black dark:fill-none" size={24} />
+                    <span className="font-bold text-[#FF00FF] dark:text-[#FFFF00]">{project.award}</span>
+                  </div>
+                )}
               </div>
               
               <div className="space-y-6">
@@ -169,20 +175,49 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     className="border-4 border-black dark:border-[#00FFFF] p-6 bg-neutral-50 dark:bg-[#111] hover:scale-[1.02] transition-transform"
                   >
                     <h5 className="font-black mb-4 uppercase text-base text-neutral-500 dark:text-[#00FFFF] font-mono tracking-wider">
-                      {category}
+                      {category.replace(/_/g, " ")}
                     </h5>
-                    <ul className="space-y-3">
-                      {Object.entries(stackMap).map(([key, value]) => (
-                        <li key={key} className="text-base font-mono text-black dark:text-neutral-300">
-                          <span className="font-bold text-black dark:text-[#FF00FF] mr-3 text-lg">{key}:</span>
-                          {value}
-                        </li>
-                      ))}
-                    </ul>
+                    {typeof stackMap === "string" ? (
+                      <p className="text-base font-mono text-black dark:text-neutral-300 leading-relaxed font-bold">
+                        {stackMap}
+                      </p>
+                    ) : (
+                      <ul className="space-y-3">
+                        {Object.entries(stackMap).map(([key, value]) => (
+                          <li key={key} className="text-base font-mono text-black dark:text-neutral-300">
+                            <span className="font-bold text-black dark:text-[#FF00FF] mr-3 text-lg">{key}:</span>
+                            {value}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </motion.div>
                 ))}
               </div>
             </motion.div>
+
+            {/* Tech Rationale */}
+            {project.tech_rationale && (
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="space-y-6"
+              >
+                <h4 className="flex items-center gap-3 text-2xl font-black text-black dark:text-white uppercase font-mono">
+                  <CheckCircle2 className="text-black dark:text-[#FF00FF]" size={28} /> 
+                  <span>TECH RATIONALE</span>
+                </h4>
+                <ul className="space-y-3">
+                  {project.tech_rationale.map((item, idx) => (
+                     <li key={idx} className="flex gap-4 text-base font-mono text-black dark:text-neutral-300">
+                        <span className="text-[#FF00FF] dark:text-[#00FFFF] font-bold">✓</span>
+                        <span>{item}</span>
+                     </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
 
             {/* Key Features */}
             <motion.div 
@@ -196,18 +231,46 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 <span>KEY FEATURES</span>
               </h4>
               <ul className="space-y-4 font-mono text-base md:text-lg text-black dark:text-neutral-300">
-                {project.key_features.map((feature, idx) => (
-                  <motion.li 
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + idx * 0.05 }}
-                    className="flex gap-4 leading-relaxed pl-2 hover:translate-x-2 transition-transform"
-                  >
-                    <span className="text-[#FF00FF] dark:text-[#00FFFF] font-bold text-xl min-w-[24px]">▸</span>
-                    <span>{feature}</span>
-                  </motion.li>
-                ))}
+                {Array.isArray(project.key_features) ? (
+                  project.key_features.map((feature, idx) => (
+                    <motion.li 
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 + idx * 0.05 }}
+                      className="flex gap-4 leading-relaxed pl-2 hover:translate-x-2 transition-transform"
+                    >
+                      <span className="text-[#FF00FF] dark:text-[#00FFFF] font-bold text-xl min-w-[24px]">▸</span>
+                      <span>{feature}</span>
+                    </motion.li>
+                  ))
+                ) : (
+                  Object.entries(project.key_features).map(([category, features], idx) => (
+                    <motion.div
+                      key={category}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 + idx * 0.05 }}
+                      className="mb-6 last:mb-0"
+                    >
+                       <h5 className="font-bold text-[#FF00FF] dark:text-[#00FFFF] uppercase mb-2 border-l-4 border-black dark:border-[#FF00FF] pl-2">
+                         {category.replace(/_/g, " ")}
+                       </h5>
+                       {Array.isArray(features) ? (
+                          <ul className="space-y-2 ml-4">
+                            {features.map((feature, fIdx) => (
+                              <li key={fIdx} className="flex gap-3">
+                                <span className="text-black dark:text-white/60">•</span>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                       ) : (
+                          <p className="ml-4">{features}</p>
+                       )}
+                    </motion.div>
+                  ))
+                )}
               </ul>
             </motion.div>
 

@@ -35,8 +35,10 @@ export interface PortfolioContent {
       platforms: string[];
       team_size: string;
       role: string;
-      tech_stack: Record<string, Record<string, string>>;
-      key_features: string[];
+      award?: string;
+      tech_stack: Record<string, Record<string, string> | string>;
+      tech_rationale?: string[];
+      key_features: string[] | Record<string, string[] | string>;
       contributions: string[];
     }>;
   };
