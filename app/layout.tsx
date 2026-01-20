@@ -6,8 +6,14 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Minimalist Portfolio Page',
-  description: 'A minimalist portfolio page',
+  title: 'Haeroo Lee Portfolio',
+  description: 'Haeroo Lee Portfolio Page',
+  keywords: ['Haeroo Lee', 'Portfolio', 'frontend', 'developer', 'Haeroo Lee Frontend Developer'],
+  authors: [{ name: 'Haeroo Lee' }],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
