@@ -18,7 +18,7 @@ const IconMap: { [key: string]: React.ReactNode } = {
 
 export const Inventory = () => {
   return (
-    <section className="py-20 bg-[#65c7f7] dark:bg-[#050505] relative transition-colors duration-300">
+    <section id="skills" className="py-20 bg-[#65c7f7] dark:bg-[#050505] relative transition-colors duration-300">
       <div className="absolute inset-0 opacity-20 dark:opacity-10"
            style={{ backgroundImage: "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)", backgroundSize: "40px 40px" }}
       />

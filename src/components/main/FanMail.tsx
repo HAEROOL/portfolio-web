@@ -9,7 +9,7 @@ const content = (contentData as ContentData).portfolio.fanMail;
 
 export const FanMail = () => {
   return (
-    <section className="py-20 bg-[#9d50bb] dark:bg-[#200a2b] overflow-hidden transition-colors duration-300">
+    <section id="contact" className="py-20 bg-[#9d50bb] dark:bg-[#200a2b] overflow-hidden transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div 
           initial={{ y: 50, opacity: 0 }}

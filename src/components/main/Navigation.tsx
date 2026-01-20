@@ -13,11 +13,20 @@ export const Navigation = () => {
     setMounted(true);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const navItems = [
-    { icon: <Home size={20} />, label: "HOME" },
-    { icon: <Disc size={20} />, label: "PROJECTS" },
-    { icon: <Backpack size={20} />, label: "SKILLS" },
-    { icon: <Mail size={20} />, label: "CONTACT" },
+    { icon: <Home size={20} />, label: "HOME", id: "home" },
+    { icon: <Disc size={20} />, label: "PROJECTS", id: "projects" },
+    { icon: <Backpack size={20} />, label: "SKILLS", id: "skills" },
+    { icon: <Mail size={20} />, label: "CONTACT", id: "contact" },
   ];
 
   return (
@@ -30,6 +39,7 @@ export const Navigation = () => {
         {navItems.map((item) => (
           <button 
             key={item.label}
+            onClick={() => scrollToSection(item.id)}
             className="flex items-center gap-2 px-4 py-2 font-black font-mono hover:bg-[#FFFF00] dark:hover:bg-[#FF00FF] dark:hover:text-black transition-colors border-2 border-transparent hover:border-black dark:hover:border-white rounded-none text-black dark:text-white"
           >
             {item.icon}
