@@ -40,10 +40,11 @@ export const Hero = () => {
             className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-black dark:text-white drop-shadow-[4px_4px_0px_rgba(255,0,255,1)] dark:drop-shadow-[4px_4px_0px_#00FFFF]"
           >
             {content.title.line1} <br />
-            <span className="inline-block bg-[#FF00FF] text-white px-4 py-1 my-1 dark:bg-[#00FFFF] dark:text-black">
               {content.title.line2}
-            </span><br />
-            {content.title.line3}
+            <br />
+            <span className="inline-block bg-[#FF00FF] text-white px-4 py-1 my-1 dark:bg-[#00FFFF] dark:text-black">
+              {content.title.line3}
+            </span>
           </motion.h1>
 
           <motion.div
