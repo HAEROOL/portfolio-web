@@ -1,13 +1,18 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Disc, Music, ExternalLink, Github } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { Disc, ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
 import contentData from "../../data/content.json";
 import { ContentData } from "../../types/content";
+import { ProjectModal } from "./ProjectModal";
 
 const content = (contentData as ContentData).portfolio.trackList;
+type Project = typeof content.tracks[0];
 
 export const TrackList = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <section className="py-20 bg-[#FFFF00] dark:bg-black border-y-4 border-black dark:border-[#FF00FF] overflow-hidden transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
@@ -20,11 +25,13 @@ export const TrackList = () => {
           {content.tracks.map((project, index) => (
             <motion.div
               key={project.id}
+              layoutId={`project-card-${project.id}`}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group relative bg-white dark:bg-[#111] border-4 border-black dark:border-[#FF00FF] p-4 shadow-[8px_8px_0px_0px_#000] dark:shadow-[8px_8px_0px_0px_#00FFFF] hover:shadow-[12px_12px_0px_0px_#000] dark:hover:shadow-[12px_12px_0px_0px_#FF00FF] hover:-translate-y-1 transition-all duration-300"
+              onClick={() => setSelectedProject(project)}
+              className="group relative bg-white dark:bg-[#111] border-4 border-black dark:border-[#FF00FF] p-4 shadow-[8px_8px_0px_0px_#000] dark:shadow-[8px_8px_0px_0px_#00FFFF] hover:shadow-[12px_12px_0px_0px_#000] dark:hover:shadow-[12px_12px_0px_0px_#FF00FF] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                 {/* Cover Art */}
@@ -67,11 +74,9 @@ export const TrackList = () => {
 
                   <div className="flex gap-4 pt-2">
                     <button className="flex-1 bg-black dark:bg-[#FF00FF] text-white dark:text-black border-2 border-black dark:border-[#FF00FF] py-3 font-black hover:bg-[#FF00FF] hover:text-black dark:hover:bg-white dark:hover:text-black transition-colors flex justify-center items-center gap-2">
-                      <ExternalLink size={18} /> DEMO
+                      <ExternalLink size={18} /> DETAIL VIEW
                     </button>
-                    <button className="flex-1 bg-white dark:bg-black text-black dark:text-white border-2 border-black dark:border-[#FF00FF] py-3 font-black hover:bg-[#00FFFF] dark:hover:bg-[#00FFFF] dark:hover:text-black transition-colors flex justify-center items-center gap-2">
-                      <Github size={18} /> CODE
-                    </button>
+                    {/* Replaced generic buttons with a single call to action since clicking anywhere opens modal */}
                   </div>
                 </div>
               </div>
@@ -79,6 +84,15 @@ export const TrackList = () => {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal 
+            project={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -24,11 +24,20 @@ export interface PortfolioContent {
     tracks: Array<{
       id: string;
       title: string;
+      subtitle: string;
       genre: string;
       desc: string;
       stack: string[];
       color: string;
       image: string;
+      url: string;
+      period: string;
+      platforms: string[];
+      team_size: string;
+      role: string;
+      tech_stack: Record<string, Record<string, string>>;
+      key_features: string[];
+      contributions: string[];
     }>;
   };
   inventory: {
@@ -36,7 +45,6 @@ export interface PortfolioContent {
     skills: Array<{
       name: string;
       icon: string;
-      level: number;
       color: string;
     }>;
     stickers: string[];

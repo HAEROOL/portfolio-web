@@ -2101,3 +2101,31 @@ html {
     opacity: .5;
   }
 }
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 3px solid #fff;
+  border-radius: 0;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #FF00FF;
+  border: 3px solid #111;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00FFFF;
+}

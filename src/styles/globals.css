@@ -133,7 +133,7 @@
  * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
  */
 @layer base {
-  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
     h1 {
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
@@ -186,4 +186,32 @@
 
 html {
   font-size: var(--font-size);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 3px solid #fff;
+  border-radius: 0;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ff00ff;
+  border: 3px solid #111;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00ffff;
 }
