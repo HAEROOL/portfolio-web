@@ -16,8 +16,7 @@
         "start": "GITHUB",
         "subscribe": "BLOG"
       },
-      "image": "https://images.unsplash.com/photo-1553172574-1eb37430181e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "level": "LV.99"
+      "image": "/assets/images/profile.jpg"
     },
     "trackList": {
       "title": "Projects",

@@ -16,7 +16,6 @@ export interface PortfolioContent {
       subscribe: string;
     };
     image: string;
-    level: string;
   };
   trackList: {
     title: string;

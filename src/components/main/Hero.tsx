@@ -90,14 +90,7 @@ export const Hero = () => {
                  className="w-full h-full object-cover"
                />
                <div className="absolute inset-0 bg-linear-to-t from-[#FF00FF]/40 to-transparent mix-blend-screen" />
-               
-               {/* Decoration Overlays */}
-               <div className="absolute top-4 right-4 bg-black text-[#FFFF00] px-2 py-1 font-mono font-bold text-xs border border-white dark:border-[#FFFF00]">
-                 REC ●
-               </div>
-               <div className="absolute bottom-4 left-4 bg-white dark:bg-black dark:text-[#00FFFF] border-2 border-black dark:border-[#00FFFF] px-3 py-1">
-                 <span className="font-black text-xl">{content.level}</span>
-               </div>
+              
             </div>
           </motion.div>
 
