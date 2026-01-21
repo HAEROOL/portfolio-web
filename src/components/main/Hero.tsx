@@ -2,12 +2,13 @@
 
 import { motion } from "motion/react";
 import { Play, Heart, Disc } from "lucide-react";
-import contentData from "../../data/content.json";
-import { ContentData } from "../../types/content";
+import { PortfolioContent } from "../../types/content";
 
-const content = (contentData as ContentData).portfolio.hero;
+interface HeroProps {
+  content: PortfolioContent['hero'];
+}
 
-export const Hero = () => {
+export const Hero = ({ content }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f4f4f4] dark:bg-[#050505] pt-20 pb-10 transition-colors duration-300">
       {/* Background Pattern */}

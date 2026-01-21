@@ -2,12 +2,13 @@
 
 import { motion } from "motion/react";
 import { Send, Mail, Twitter, Instagram } from "lucide-react";
-import contentData from "../../data/content.json";
-import { ContentData } from "../../types/content";
+import { PortfolioContent } from "../../types/content";
 
-const content = (contentData as ContentData).portfolio.fanMail;
+interface FanMailProps {
+  content: PortfolioContent['fanMail'];
+}
 
-export const FanMail = () => {
+export const FanMail = ({ content }: FanMailProps) => {
   return (
     <section id="contact" className="min-h-screen py-20 bg-[#9d50bb] dark:bg-[#200a2b] overflow-hidden transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6">

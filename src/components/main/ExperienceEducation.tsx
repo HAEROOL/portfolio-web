@@ -2,10 +2,11 @@
 
 import { motion } from "motion/react";
 import { GraduationCap, Briefcase, Trophy, Award, Users } from "lucide-react";
-import contentData from "../../data/content.json";
-import { ContentData } from "../../types/content";
+import { PortfolioContent } from "../../types/content";
 
-const { resume } = (contentData as ContentData).portfolio;
+interface ExperienceEducationProps {
+  resume: PortfolioContent['resume'];
+}
 
 // Helper components for consistent "Game UI" styling
 const SectionHeader = ({ title, icon: Icon }: { title: string; icon: any }) => (
@@ -32,7 +33,7 @@ const Badge = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-export const ExperienceEducation = () => {
+export const ExperienceEducation = ({ resume }: ExperienceEducationProps) => {
   // Combine work experience and education into one array
   const combinedItems = [
     ...resume.work_experience.map(item => ({

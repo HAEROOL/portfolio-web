@@ -2,10 +2,11 @@
 
 import { motion } from "motion/react";
 import { Battery, Cpu, Wifi, Database, Layers, Monitor } from "lucide-react";
-import contentData from "../../data/content.json";
-import { ContentData } from "../../types/content";
+import { PortfolioContent } from "../../types/content";
 
-const content = (contentData as ContentData).portfolio.skills;
+interface SkillsProps {
+  content: PortfolioContent['skills'];
+}
 
 const IconMap: { [key: string]: React.ReactNode } = {
   Cpu: <Cpu />,
@@ -16,7 +17,7 @@ const IconMap: { [key: string]: React.ReactNode } = {
   Battery: <Battery />,
 };
 
-export const Skills = () => {
+export const Skills = ({ content }: SkillsProps) => {
   return (
     <section id="skills" className="min-h-screen py-20 bg-[#65c7f7] dark:bg-[#050505] relative transition-colors duration-300">
       <div className="absolute inset-0 opacity-20 dark:opacity-10"

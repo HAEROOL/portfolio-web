@@ -3,14 +3,16 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Disc, ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
-import contentData from "../../data/content.json";
-import { ContentData } from "../../types/content";
+import { PortfolioContent } from "../../types/content";
 import { ProjectModal } from "./ProjectModal";
 
-const content = (contentData as ContentData).portfolio.trackList;
-type Project = typeof content.tracks[0];
+type Project = PortfolioContent['trackList']['tracks'][0];
 
-export const TrackList = () => {
+interface TrackListProps {
+  content: PortfolioContent['trackList'];
+}
+
+export const TrackList = ({ content }: TrackListProps) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
