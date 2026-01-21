@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Home, Disc, Backpack, Mail, Moon, Sun } from "lucide-react";
+import { Home, Disc, Backpack, Mail, Moon, Sun, Briefcase } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -25,6 +25,7 @@ export const Navigation = () => {
   const navItems = [
     { icon: <Home size={20} />, label: "HOME", id: "home" },
     { icon: <Disc size={20} />, label: "PROJECTS", id: "projects" },
+    { icon: <Briefcase size={20} />, label: "INFO", id: "experience" },
     { icon: <Backpack size={20} />, label: "SKILLS", id: "skills" },
     { icon: <Mail size={20} />, label: "CONTACT", id: "contact" },
   ];
