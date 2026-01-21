@@ -184,8 +184,8 @@
         }
       ]
     },
-    "inventory": {
-      "title": "Inventory",
+    "skills": {
+      "title": "Skills",
       "skills": [
         { "name": "JavaScript", "icon": "Cpu", "color": "bg-[#F7DF1E]" },
         { "name": "TypeScript", "icon": "Monitor", "color": "bg-[#3178C6]" },

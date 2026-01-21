@@ -42,7 +42,7 @@ export interface PortfolioContent {
       contributions: string[];
     }>;
   };
-  inventory: {
+  skills: {
     title: string;
     skills: Array<{
       name: string;

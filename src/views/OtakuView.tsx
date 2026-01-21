@@ -4,7 +4,7 @@ import { Hero } from "../components/main/Hero";
 import { Navigation } from "../components/main/Navigation";
 import { TrackList } from "../components/main/TrackList";
 import { ExperienceEducation } from "../components/main/ExperienceEducation";
-import { Inventory } from "../components/main/Inventory";
+import { Skills } from "../components/main/Skills";
 
 const OtakuView = () => {
   return (
@@ -12,7 +12,7 @@ const OtakuView = () => {
       <Navigation />
       <Hero />
       <ExperienceEducation />
-      <Inventory />
+      <Skills />
       <TrackList />
     </div>
   );
