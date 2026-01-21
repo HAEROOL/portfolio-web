@@ -66,6 +66,39 @@ export interface PortfolioContent {
       credits: string;
     };
   };
+  resume: {
+    education_and_military: {
+      education: Array<{
+        institution?: string;
+        program?: string;
+        major?: string;
+        period: string;
+      }>;
+    };
+    work_experience: Array<{
+      company: string;
+      period: string;
+      department?: string;
+      role?: string;
+      tasks: string[];
+    }>;
+    awards_and_activities: {
+      awards: Array<{
+        title: string;
+        date: string;
+      }>;
+      activities: Array<{
+        organization: string;
+        period: string;
+        experience: string[];
+      }>;
+    };
+    technical_skills: {
+      languages: Record<string, string>;
+      frontend: Record<string, string>;
+      tools: Record<string, string>;
+    };
+  };
 }
 
 export interface ContentData {

@@ -217,6 +217,80 @@
         "copyright": "© 2025 MAISON DE OTAKU. ALL RIGHTS RESERVED.",
         "credits": "DESIGNED WITH 💜 & ☕"
       }
+    },
+    "resume": {
+      "education_and_military": {
+        "education": [
+          {
+            "institution": "한국기술교육대학교",
+            "major": "컴퓨터공학부 학사",
+            "period": "2017.03 - 2024.02"
+          },
+          {
+            "program": "삼성 청년 SW 아카데미(SSAFY)",
+            "period": "2024.07 - 2025.06"
+          }
+        ]
+      },
+      "work_experience": [
+        {
+          "company": "한전KDN",
+          "period": "2025.08 - 현재",
+          "department": "전산",
+          "tasks": [
+            "한국서부발전 인사노무시스템 유지보수"
+          ]
+        },
+        {
+          "company": "비디",
+          "period": "2022.07 - 2022.12",
+          "role": "SW 개발(장기현장실습 인턴)",
+          "tasks": [
+            "서비스 인프라 설계 및 구축",
+            "DB 설계 및 Springboot 기반 백엔드 개발",
+            "VueJS 기반 프론트엔드 개발"
+          ]
+        }
+      ],
+      "awards_and_activities": {
+        "awards": [
+          {
+            "title": "삼성 청년 SW 아카데미 자율 프로젝트 우수상",
+            "date": "2025.06"
+          },
+          {
+            "title": "2022 LINC 3.0 캡스톤 디자인 경진대회 대상",
+            "date": "2022.11"
+          }
+        ],
+        "activities": [
+          {
+            "organization": "BCSDLab (교내 IT 동아리)",
+            "period": "2021.03 - 2024.02",
+            "experience": [
+              "FE/BE/UX 팀원들과 협업",
+              "교내 게시물 알림/모아보기 서비스 FE 개발",
+              "음식점 리뷰 서비스 마이페이지 FE 개발",
+              "상점 정보 관리 서비스 회원가입 및 공통 컴포넌트 FE 개발"
+            ]
+          }
+        ]
+      },
+      "technical_skills": {
+        "languages": {
+          "js_ts": "비동기 처리(async/await) 제어 가능, 인터페이스/타입 별칭/제네릭 활용 명확한 타입 선언, API 응답 타입 안정성 유지 경험"
+        },
+        "frontend": {
+          "html_css": "시멘틱 태그 및 SEO 이해, Box-model/Flex/Grid 및 반응형 스타일링, BEM 네이밍 기반 계층 구조 작성",
+          "react_nextjs": "컴포넌트 기반 아키텍처 및 훅 패턴 활용, CSR/SSR 상황별 활용, Dynamic Import를 통한 성능/UX 고려 코드 스플리팅",
+          "styling": "TailwindCSS 기반 일관된 디자인 시스템 구축",
+          "state_management": "TanstackQuery(ReactQuery)를 활용한 비동기 상태 처리 구조 설계 및 제어"
+        },
+        "tools": {
+          "testing": "Cypress 기반 사용자 관점 E2E 테스트 시나리오 설계",
+          "collaboration": "JIRA를 활용한 에픽/스토리/작업 단위 스프린트 협업"
+        }
+      }
     }
   }
 }

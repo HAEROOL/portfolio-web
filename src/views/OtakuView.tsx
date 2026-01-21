@@ -3,6 +3,7 @@
 import { Hero } from "../components/main/Hero";
 import { Navigation } from "../components/main/Navigation";
 import { TrackList } from "../components/main/TrackList";
+import { ExperienceEducation } from "../components/main/ExperienceEducation";
 import { Inventory } from "../components/main/Inventory";
 import { FanMail } from "../components/main/FanMail";
 
@@ -12,6 +13,7 @@ const OtakuView = () => {
       <Navigation />
       <Hero />
       <TrackList />
+      <ExperienceEducation />
       <Inventory />
       <FanMail />
     </div>
