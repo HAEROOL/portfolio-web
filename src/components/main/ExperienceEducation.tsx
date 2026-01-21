@@ -65,8 +65,8 @@ export const ExperienceEducation = () => {
   });
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto" id="experience">
-      <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-12">
+    <section className="min-h-screen py-20 px-4 md:px-8 max-w-7xl mx-auto" id="experience">
+      <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-12 items-start">
         {/* Left Column: Experience & Education (Combined) */}
         <div className="space-y-12">
           <motion.div

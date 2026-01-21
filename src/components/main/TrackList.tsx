@@ -14,7 +14,7 @@ export const TrackList = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-20 bg-[#FFFF00] dark:bg-black border-y-4 border-black dark:border-[#FF00FF] overflow-hidden transition-colors duration-300">
+    <section id="projects" className="min-h-screen py-20 bg-[#FFFF00] dark:bg-black border-y-4 border-black dark:border-[#FF00FF] overflow-hidden transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-end justify-between mb-12 border-b-4 border-black dark:border-[#FF00FF] pb-4">
           <h2 className="text-5xl md:text-7xl font-black text-black dark:text-[#FF00FF] italic">{content.title}</h2>
