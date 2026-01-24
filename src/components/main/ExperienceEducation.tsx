@@ -66,8 +66,9 @@ export const ExperienceEducation = ({ resume }: ExperienceEducationProps) => {
   });
 
   return (
-    <section className="min-h-screen py-20 px-4 md:px-8 max-w-7xl mx-auto" id="experience">
-      <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-12 items-start">
+    <section className="min-h-screen py-20 border-y-4 border-black dark:border-purple-400 transition-colors duration-300" id="experience">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-12 items-start">
         {/* Left Column: Experience & Education (Combined) */}
         <div className="space-y-12">
           <motion.div
@@ -163,6 +164,7 @@ export const ExperienceEducation = ({ resume }: ExperienceEducationProps) => {
             ))}
           </motion.div>
         </div>
+      </div>
       </div>
     </section>
   );
