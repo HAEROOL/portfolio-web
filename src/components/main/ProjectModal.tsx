@@ -253,7 +253,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                       transition={{ delay: 0.6 + idx * 0.05 }}
                       className="mb-6 last:mb-0"
                     >
-                       <h5 className="font-bold text-[#FF00FF] dark:text-[#00FFFF] uppercase mb-2 border-l-4 border-black dark:border-[#FF00FF] pl-2">
+                       <h5 className="font-bold text-[#FF00FF] dark:text-[#00FFFF] uppercase mb-2 dark:border-[#FF00FF] pl-2">
                          {category.replace(/_/g, " ")}
                        </h5>
                        {Array.isArray(features) ? (
